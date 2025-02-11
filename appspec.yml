@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /index.html
+    destination: /var/www/html/index.html
+  - source: /src/
+    destination: /var/www/html/src/
+
+hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      runas: root
